@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>JobPilot NOVA — Get Hired</title>
+<link rel="stylesheet" href="style.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="bg"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div><div class="grid"></div></div>
+<canvas id="confetti"></canvas>
+
+<nav><div class="logo"><div class="mark">✦</div><div><b>JOBPILOT <span>NOVA</span></b><small>AUTO-APPLIER OS</small></div></div>
+<div class="nav-r"><button id="notifBtn" class="ghost-btn">🔔 Alerts</button><a class="wa" target="_blank" href="https://wa.me/254741709442?text=Hi%20JobPilot%20NOVA">💬 0741709442</a></div></nav>
+
+<div class="ticker"><div class="track" id="tick">● LIVE JOBS ● REMOTIVE + ARBEITNOW ● 1-CLICK APPLY ● WHATSAPP SUCCESS ALERT ●</div></div>
+
+<div class="container">
+<header class="hero">
+<div><div class="pill">🚀 v2 NOVA — built to get you hired</div>
+<h1>Apply to 50 jobs <span class="grad">before lunch.</span></h1>
+<p>Live jobs, AI cover letters, pipeline tracking, success notifications. You click — NOVA handles the paperwork.</p>
+<div class="searchbar"><input id="q" placeholder="Search: react, python, video editing, sales..."/><button id="searchBtn">Search ⚡</button></div>
+<div class="chips"><button data-f="developer">Dev</button><button data-f="design">Design</button><button data-f="marketing">Marketing</button><button data-f="data">Data</button><button data-f="customer">Support</button></div>
+</div>
+<div class="dash">
+<div class="stat"><small>JOBS FOUND</small><b id="stFound">0</b></div>
+<div class="stat"><small>APPLIED</small><b id="stApplied">0</b></div>
+<div class="stat"><small>INTERVIEWS</small><b id="stInter">0</b></div>
+<div class="rate"><small>SUCCESS RATE</small><div class="bar"><div id="rateFill"></div></div><b id="rateTxt">0%</b></div>
+</div>
+</header>
+
+<div class="grid2">
+<div class="glass card"><h3>👤 Pilot Profile</h3><p class="muted">NOVA writes cover letters from this.</p>
+<div class="row"><input id="pName" placeholder="Full name"/><input id="pEmail" placeholder="Email"/></div>
+<div class="row"><input id="pPhone" placeholder="Phone 0741709442"/><input id="pTitle" placeholder="Title e.g. Frontend Dev"/></div>
+<input id="pSkills" placeholder="Skills: html, css, js, python"/>
+<textarea id="pCv" placeholder="2 lines about you: e.g. Built 3 sites, M-Pesa dashboard, fast learner..."></textarea>
+<button class="primary" id="saveP">Save Pilot →</button>
+<div class="divider">ALL SITES // ONE HUB</div>
+<div class="sites">
+<a target="_blank" href="https://www.linkedin.com/jobs/">in LinkedIn</a><a target="_blank" href="https://www.indeed.com/">Indeed</a><a target="_blank" href="https://www.brightermonday.co.ke/">BrighterMonday</a><a target="_blank" href="https://www.fuzu.com/">Fuzu</a><a target="_blank" href="https://www.careerpoint.co.ke/">CareerPointKE</a><a target="_blank" href="https://www.upwork.com/">Upwork</a><a target="_blank" href="https://remoteok.com/">RemoteOK</a><a target="_blank" href="https://weworkremotely.com/">WWR</a><a target="_blank" href="https://www.glassdoor.com/">Glassdoor</a>
+</div></div>
+
+<div class="glass card"><div class="card-h"><h3>Mission Pipeline</h3><span class="tag" id="pipeTag">0 applied</span></div>
+<div class="kanban"><div class="col"><b>💾 SAVED</b><div id="kSaved"></div></div><div class="col mid"><b>📨 APPLIED</b><div id="kApplied"></div></div><div class="col gold"><b>🎯 INTERVIEW</b><div id="kInter"></div></div></div>
+<button class="ghost-btn wide" id="waReport">📲 Send Wins to WhatsApp</button></div>
+</div>
+
+<div class="glass card"><div class="card-h"><h3>🔥 Live Targets</h3><span class="live">● LIVE API</span></div><div id="jobs" class="jobs"></div></div>
+<p class="foot">NOVA OS • semi-auto apply = you approve → real site opens → tracked + notified • 0741709442</p>
+</div>
+
+<div id="applyModal" class="hidden"><div class="modal"><div class="m-top"><h3 id="mTitle">Apply</h3><p id="mCo"></p></div><label>AI Cover Letter — edit before launch</label><textarea id="mLetter" rows="8"></textarea><div class="row"><button class="primary" id="mConfirm">LAUNCH APPLICATION 🚀</button><button class="ghost-btn" id="mClose">Abort</button></div><small>Opens real apply page + marks Applied + fires WhatsApp success alert</small></div></div>
+<div id="toast"></div>
+<button id="botBtn">🤖 NovaBot</button>
+<div id="botWin" class="hidden"><div class="bot-head"><b>NovaBot ✦</b><span id="botX">✕</span></div><div id="botMsgs"></div><div class="row"><input id="botIn" placeholder="Ask: how do I win?"/><button id="botSend">➤</button></div></div>
+<script src="script.js"></script>
+</body>
+</html>
